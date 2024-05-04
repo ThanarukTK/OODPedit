@@ -6,6 +6,8 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.util.ArrayList;
 
+import project.Transaction.Transaction;
+
 	public class MoneyManager {
 		private ArrayList<Transaction> transactions = new ArrayList<>();
 
@@ -50,19 +52,16 @@ import java.util.ArrayList;
 				transaction.display();
 			}
 		}
-		
 		// Method to write transactions to a file
 		public void writeToFile(String filename) {
 			try {
-				BufferedWriter writeFile = new BufferedWriter(new FileWriter(filename, true)); // Append mode
+				BufferedWriter writeFile = new BufferedWriter(new FileWriter(filename,true));
 				for (Transaction e : transactions) {
 					writeFile.write(e.getType() + " " + e.getAmount() + "\n");
 				}
 				writeFile.close();
-				System.out.println("Transactions written to file: " + filename);
 			} catch (Exception e) {
-				System.out.println("Something went wrong while writing to file.");
-				e.printStackTrace();
+				System.out.println("SomethingWrongHappen");
 			}
 		}
 
@@ -83,7 +82,7 @@ import java.util.ArrayList;
 				}
 				readFile.close();
 			} catch (Exception e) {
-				System.out.println(e.getStackTrace());
+				System.out.println("Something WrongHappen");
 			}
 		}
 	}
