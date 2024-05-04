@@ -30,4 +30,4 @@ The system provides functionality for money management
 7. Exit the application. 
 
 Class Diagram  
-![Diagram](JavaProject/photo/image.png)
+![Diagram](JavaProject/src/photo/pjood.drawio.png)
